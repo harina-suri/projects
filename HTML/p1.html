@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="ps1.css">
+    <script src="https://kit.fontawesome.com/06e9fbe423.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <!-- Video Section -->
+    <div id="header">
+        <div class="container"> 
+            <video autoplay muted loop>
+                <source src="bak.mp4" type="video/mp4">
+            </video>
+            <nav>
+                <img src="images/log.png" class="logo" alt="Logo">
+                <ul>
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#portfolio">Projects</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, <span>I'm</span><br>Harina Suri</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section (BELOW the video) -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.png" alt="About Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a college student, I exhibit the capacity to adeptly manage multiple tasks with efficiency. I possess a comprehensive understanding of foundational concepts and boast strong communication skills.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('language')">Language</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br>Java, JavaScript, Python, HTML, CSS,C,C++</li>
+                            <li><span>Database Technologies:</span><br>MySQL</li>
+                            <li><span>Data Analyst</span><br>Asseting Data </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="language">
+
+                        <ul>
+                            <li><span>English</span><br>Proficient level C1</li>
+                            <li><span>Hindi</span><br>Proficient level C1</li>
+                            <li><span>Tamil</span><br>Proficient level C1</li>
+                            <li><span>Telugu</span><br>Intermediate level B2</li>
+                            <li><span>French</span><br>Beginners level А1</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+
+                        <ul>
+                            <li><span>St. Ann's High School (ICSE),Secunderabad</span><br>School (2020)</li>
+                            <li><span>St. Ann's High School (ISC),Secunderabad</span><br>Intermediate-MPC (2022)</li>
+                            <li><span>Keshav Memorial Institute of Technology,Himatnagar</span><br>B.Tech (2026)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+<!-- Services Section -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-paint-roller"></i>
+                <h2>Web Development</h2>
+                <p>The development of websites entails the creation, maintenance, and management of web assets, encompassing elements such as web design, publishing, programming, and database management for internet-based applications.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-photo-film"></i>
+                <h2>Photoshop</h2>
+                <p>Adobe's Photoshop is a versatile way for image creation, graphic design, and photo editing, offering features for pixel-based images, raster graphics, and vector graphics.</p>              
+            </div>
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>Database Management</h2>
+                <p>A database is a collection of data managed by a database system that interacts with users and applications for data capture and analysis.</p>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- ----------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/house.png">
+                <div class="layer">
+                    <h3>House Price Prediction</h3>
+                    <p>The project aims to create a machine-learning model using Jupyter Notebook and
+                        HTML. We are doing supervised learning and strive to do predictive analysis to
+                        predict housing prices.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/todo.png">
+                <div class="layer">
+                    <h3>To Do website</h3>
+                    <p>Developed a user-friendly website with HTML,CSS and JavaScript that can add all the tasks
+                        to complete in a day and also delete them when done with it
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/recipe.png">
+                <div class="layer">
+                    <h3>Recipe Finder</h3>
+                    <p>This web page is built to allow users to insert their already-owned ingredients and
+                        find recipes they will be able to make with said ingredients. Technologies used in
+                        this is Javascript , HTML and css.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-- --------------contact------------ -->
+ <div id="contact">
+    <div class="container">
+       <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> tanjoreharina459@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> +91 2356897415</p>
+        <div class="social-icons">
+            <a href="https://github.com/harina-suri"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/harina-suri/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://leetcode.com/u/harina_suri/"><i class="fa-solid fa-code"></i></a>
+        </div>
+        <a href="images/harina_resume.pdf"  download class="btn btn2">Download CV</a>
+       </div> 
+       <div class="contact-right">
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+            <span id="msg"></span>
+        </form>
+       </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @harina, Made with by Harina Suri</p>
+    </div>
+ </div>
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzjC7_bo65384LlA0oHCTUY9cpPl3Do3H_hPHE_cK_7NBIywYcB2FENTzARn70QMe0kYg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Message sent successfully";
+        msg.style.display = "block";
+        setTimeout(function(){
+            msg.style.display = "none";
+        }, 2000);
+        form.reset();
+    })
+    .catch(error => console.error('Error!', error.message));
+});
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+/* Reset and base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+
+}
+
+/* Header section (video part) */
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+#header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* Full viewport width */
+  height: 150vh; /* Full viewport height */
+  object-fit: cover; /* Cover the area without distortion */
+  transform: translate(-50%, -50%); /* Center the video */
+  z-index: 1; /* Video should be behind other elements */
+}
+
+.container {
+  padding: 10px 10%;
+  position: relative;
+  z-index: 2; /* Ensure content is above the video */
+}
+
+/* Navigation styles */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff;
+  z-index: 2; /* Ensure the nav is above the video */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+nav .logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Header text styles */
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+  position: relative;
+  color: #fff;
+  text-align: left;
+  z-index: 2; /* Ensure text is above the video */
+}
+
+.header-text h1 {
+  font-size: 60px;
+}
+
+/* About section styles */
+#about {
+  padding: 80px 0;
+  color: white !important;
+  background-color: black !important; /* Ensure black background */
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: cadetblue;
+}
+
+p {
+  font-size: 18px; 
+  line-height: 1.6;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  justify-content: flex-start;
+}
+
+.tab-links {
+  margin-right: 50px;
+  color: cadetblue;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background:white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+.tab-contents ul {
+  padding-left: 0; /* Ensure the list aligns to the left */
+  margin-left: 0;
+  list-style-position: inside;
+  text-align: left; /* Aligns all text in the list to the left */
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color:cadetblue;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Services section styles */
+#services {
+  background-color: black !important; /* Ensure black background */
+  color: white !important; /* Ensure white text */
+  padding: 50px 0;
+  text-align:left;
+}
+
+#services .sub-title {
+  font-size: 45px;
+  margin-bottom: 40px;
+  color:cadetblue;
+}
+
+#services .services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+#services .services-list div {
+  background-color: #333;
+  padding: 40px;
+  border-radius: 10px;
+  transition: background 0.5s,transform0.5s ;
+}
+#services .services-list div i{
+  font-size: 30px;
+}
+#services .services-list h2 {
+  font-size: 24px;
+  margin: 20px 0;
+  color:cadetblue;
+}
+
+#services .services-list p {
+  font-size: 16px;
+}
+#services .services-list div:hover{
+  background-color: #555;
+  transform: translateY(-10px);
+}
+/*------- portfolio-----*/
+#portfolio {
+  background-color: black !important; /* Ensure black background */
+  color: white !important; /* Ensure white text */
+  padding: 50px 0;
+  text-align:left;
+}
+#portfolio .work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+#portfolio .work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+#portfolio .layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6),darkslategrey);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: large;
+  transition: height 0.5s ease;
+}
+#portfolio .layer h3{
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+#portfolio .work:hover img{
+  transform: scale(1.2);
+}
+#portfolio .layer p{
+  font-size: 15px;
+}
+#portfolio .work:hover .layer{
+  height: 100%;
+}
+#portfolio .btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border:1px solid #555;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+#portfolio .btn:hover{
+  background: #555;
+}
+/*--------contact---------*/
+#contact {
+  background-color: black !important; /* Ensure black background */
+  color: white !important; /* Ensure white text */
+  padding: 50px 0;
+  text-align:left;
+}
+#contact .contact-left{
+  flex-basis: 35%;
+}
+#contact .contact-right {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: flex-start; /* Aligns form to the left within the section */
+  align-items: flex-start;
+  margin-top: -20px;/* Aligns the form to the right */
+}
+#contact h2 {
+  margin-bottom: 10px; /* Adjust this margin as needed */
+}
+#contact .contact-left p{
+  margin-top: 30px;
+}
+#contact .contact-left p i{
+  color: cadetblue;
+  margin-right: 15px;
+  font-size: 25px;
+}
+#contact .social-icons{
+  margin-top: 30px;
+}
+#contact .social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color:cadetblue;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+#contact .social-icons a:hover{
+  color: #555;
+  transform: translateY(-5px);
+}
+#contact .btn.btn2{
+  display:inline-block;
+  margin: 50px auto;
+  width: fit-content;
+  border:1px solid #555;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  background: cadetblue;
+}
+#contact .contact-right {
+  display: flex;
+  justify-content: flex-end; /* Moves the form to the right */
+}
+
+#contact .contact-right form {
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%; /* Ensures input fields take up full width of the form */
+  border: 0;
+  outline: none;
+  background: #555;
+  padding: 15px;
+  margin: 10px 0;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn.btn2 {
+  width: 100%;
+  padding: 14px 50px;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block; 
+  text-align: center;
+}
+#contact .copyright{
+  width: 100%;
+  text-align: center;
+  padding:1px 0;
+  background: #555;
+  font-weight: 200;
+  margin-top: 20px;
+}
+#contact .copyright i{
+  color: blue;
+}
+#msg {
+  color: #28a745;
+  padding: 10px;
+  margin-top: 5px;
+  display: none;
+  font-size: 16px;
+  border-radius: 6px;
+  z-index: 10; /* Ensure it appears above other elements */
+  text-align: left;
+}
+
+
